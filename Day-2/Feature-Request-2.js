@@ -1,0 +1,11 @@
+let p = 10;
+let q = 20;
+console.log(p > q);
+console.log(p < q);
+console.log(p >= q);
+console.log(p <= q);
+console.log(p == q);
+console.log(p === q);
+console.log(p > 0 && q > 0);
+console.log(p > 0 || q < 0);
+console.log(!(p < 0));
