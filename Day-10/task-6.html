@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <input type="text" id="keyUpInput" placeholder="Type something">
+    <p id="displayParagraph"></p>
+    <script>
+        document.getElementById("keyUpInput").addEventListener("keyup", function() {
+            document.getElementById("displayParagraph").textContent = this.value;
+        });
+    </script>
+</body>
+</html>

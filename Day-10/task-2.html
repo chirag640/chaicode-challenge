@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <img id="toggleImage" src="image.jpg" alt="Image" style="display: block;">
+    <script>
+        document.getElementById("toggleImage").addEventListener("dblclick", function() {
+            let img = document.getElementById("toggleImage");
+            img.style.display = (img.style.display === "none") ? "block" : "none";
+        });
+    </script>
+</body>
+</html>

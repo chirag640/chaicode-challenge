@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <select id="mySelect">
+        <option value="Option 1">Option 1</option>
+        <option value="Option 2">Option 2</option>
+        <option value="Option 3">Option 3</option>
+    </select>
+    <p id="selectedValue"></p>
+    <script>
+        document.getElementById("mySelect").addEventListener("change", function() {
+            document.getElementById("selectedValue").textContent = this.value;
+        });
+    </script>
+</body>
+</html>
