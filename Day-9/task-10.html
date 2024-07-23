@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <div id="myDiv" style="width:100px; height:100px; border:1px solid black;">Hover over me</div>
+    <script>
+        let div = document.getElementById("myDiv");
+        div.addEventListener("mouseover", function() {
+            div.style.borderColor = "red";
+        });
+    </script>
+</body>
+</html>

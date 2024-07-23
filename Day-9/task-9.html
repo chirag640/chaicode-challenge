@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+    <button id="myButton">Click me</button>
+    <p id="myParagraph">Original Text</p>
+    <script>
+        let button = document.getElementById("myButton");
+        let paragraph = document.getElementById("myParagraph");
+        button.addEventListener("click", function() {
+            paragraph.textContent = "Text changed!";
+        });
+    </script>
+</body>
+</html>
