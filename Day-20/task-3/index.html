@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <input type="submit" value="Submit">
+  </form>
+
+  <div id="savedData"></div>
+
+  <script>
+    document.getElementById('userForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      let name = document.getElementById('name').value;
+      let email = document.getElementById('email').value;
+      let userData = { name: name, email: email };
+      localStorage.setItem('userData', JSON.stringify(userData));
+      displaySavedData();
+    });
+
+    function displaySavedData() {
+      let savedData = JSON.parse(localStorage.getItem('userData'));
+      if (savedData) {
+        document.getElementById('savedData').innerText = `Name: ${savedData.name}, Email: ${savedData.email}`;
+      }
+    }
+
+    // Display saved data on page load
+    window.onload = displaySavedData;
+  </script>
+</body>
+</html>
