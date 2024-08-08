@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+}
+
+.weather-container {
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.sunny {
+    background-color: #f9d71c;
+    color: #f1f1f1;
+}
+
+.rainy {
+    background-color: #4a90e2;
+    color: #ffffff;
+}
+
+.cloudy {
+    background-color: #95a5a6;
+    color: #2c3e50;
+}
+
+.weather-icon img {
+    width: 100px;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.weather-icon img:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.search-container {
+    margin-top: 20px;
+}
+
+#city-input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    margin-right: 10px;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #555;
+}
+
+.extra-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 10px;
+}
+
+#forecast {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.forecast-day {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.forecast-day:hover {
+    transform: scale(1.05);
+}
+
+.forecast-day img {
+    width: 50px;
+    height: 50px;
+}
+
+@media (max-width: 768px) {
+    .weather-container {
+        padding: 15px;
+        max-width: 100%;
+        margin: 20px;
+    }
+
+    #city-input, #search-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .weather-icon img {
+        width: 80px;
+    }
+}
