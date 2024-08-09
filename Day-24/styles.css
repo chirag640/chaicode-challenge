@@ -12,22 +12,36 @@ body {
     margin: 50px auto;
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.5s ease, color 0.5s ease;
+    transition: background-image 0.5s ease, color 0.5s ease;
+    background-size: cover;
+    background-position: center;
+    color: #000000;
+    overflow: hidden;
 }
 
+
 .sunny {
-    background-color: #f9d71c;
-    color: #f1f1f1;
+    background-image: url('sunnyWeather.jpg');
 }
 
 .rainy {
-    background-color: #4a90e2;
-    color: #ffffff;
+    background-image: url('rainyWeather.jpg');
 }
 
 .cloudy {
-    background-color: #95a5a6;
-    color: #2c3e50;
+    background-image: url('coudyWeather.jpg');
+}
+
+.snow {
+    background-image: url('snowWeather.jpg');
+}
+
+.storm {
+    background-image: url('stormWeather.jpg');
+}
+
+.mist {
+    background-image: url('mistWeather.jpg');
 }
 
 .weather-icon img {
@@ -48,7 +62,6 @@ body {
         opacity: 1;
     }
 }
-
 .search-container {
     margin-top: 20px;
 }

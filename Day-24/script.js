@@ -88,17 +88,51 @@ function displayForecast(forecastData) {
 
 function updateWeatherStyle(weather) {
     const container = document.querySelector('.weather-container');
-    container.classList.remove('sunny', 'rainy', 'cloudy');
-    
-    if (weather === 'Clear') {
-        container.classList.add('sunny');
-    } else if (weather === 'Rain') {
-        container.classList.add('rainy');
-    } else if (weather === 'Clouds') {
-        container.classList.add('cloudy');
+    container.classList.remove('sunny', 'rainy', 'cloudy', 'snow', 'storm', 'mist');
+
+    switch (weather) {
+        case 'Clear':
+            container.classList.add('sunny');
+            break;
+        case 'Rain':
+            container.classList.add('rainy');
+            break;
+        case 'Clouds':
+            container.classList.add('cloudy');
+            break;
+        case 'Snow':
+            container.classList.add('snow');
+            break;
+        case 'Thunderstorm':
+            container.classList.add('storm');
+            break;
+        case 'Mist':
+        case 'Fog':
+        case 'Haze':
+            container.classList.add('mist');
+            break;
+        default:
+            container.classList.add('sunny'); 
+            break;
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    preloadImages([
+        'sunnyWeather.jpg',
+        'rainyWeather.jpg',
+        'cloudyWeather.jpg',
+        'snowWeather.jpg',
+        'stormWeather.jpg',
+        'mistWeather.jpg'
+    ]);
+
     getWeatherData('Vadodara');
 });
+
+function preloadImages(images) {
+    images.forEach(image => {
+        const img = new Image();
+        img.src = image;
+    });
+}
