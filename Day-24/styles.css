@@ -38,6 +38,7 @@ body {
 
 .storm {
     background-image: url('stormWeather.jpg');
+    color: #f0f0f0;
 }
 
 .mist {
