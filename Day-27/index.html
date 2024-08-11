@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Management App</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="main-container">
+        <aside class="sidebar">
+            <h2>Task Manager</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" id="inbox-link">Inbox</a></li>
+                    <li><a href="#" id="today-link">Today</a></li>
+                    <li><a href="#" id="upcoming-link">Upcoming</a></li>
+                    <li><a href="#" id="completed-link">Completed Tasks</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div class="content">
+            <header class="header">
+                <h1 id="page-title">Inbox</h1>
+                <label class="dark-mode-toggle">
+                    <input type="checkbox" id="dark-mode-switch">
+                    <span class="slider"></span>
+                </label>
+            </header>
+            <section class="search-section">
+                <input type="text" id="search-bar" placeholder="Search tasks...">
+            </section>  
+            <section class="task-section">
+                <form id="task-form">
+                    <input type="text" id="title" placeholder="Task Title" required />
+                    <input type="text" id="description" placeholder="Task Description" required />
+                    <input type="date" id="due-date" required min="" />
+                    <select id="priority" required>
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="work">Work</option>
+                        <option value="personal">Personal</option>
+                        <option value="study">Study</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <button type="submit">Add Task</button>
+                </form>
+                <ul id="task-list"></ul>
+            </section>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f4f8;
+    color: #333;
+    display: flex;
+    height: 80%;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-container {
+    display: flex;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+h1, h2 {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.sidebar {
+    background-color: #2E3A59;
+    color: #FFF;
+    width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    color: #B0B7C3;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #3E4A69;
+}
+
+.content {
+    flex: 1;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+.header {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header h1 {
+    font-size: 36px;
+    font-weight: normal;
+    color: #333;
+}
+
+.search-section {
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.task-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#task-form {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+#task-form input, #task-form button, #task-form select {
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #DDD;
+    border-radius: 4px;
+}
+
+#task-form select {
+    width: 30%;
+}
+
+#task-form input {
+    width: calc(100% - 22px);
+}
+
+#task-form button {
+    background-color: #2E3A59;
+    color: #FFF;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#task-form button:hover {
+    background-color: #3E4A69;
+}
+
+
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #DDD;
+}
+
+.task h3 {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.task p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.task-completed h3 {
+    text-decoration: line-through;
+}
+
+.task-completed p {
+    color: #aaa;
+}
+
+.task-details {
+    display: flex;
+    align-items: center;
+}
+
+.task-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.task-details input[type="checkbox"] {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
+}
+
+.task-buttons button, .task-buttons input[type="checkbox"] {
+    background: none;
+    border: none;
+    color: #2E3A59;
+    cursor: pointer;
+    margin-right: 15px;
+    font-size: 16px;
+}
+
+.task-buttons button:hover {
+    color: #3E4A69;
+}
+
+/* Dark mode */
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: #e0e0e0;
+}
+
+.sidebar.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+.header.dark-mode {
+    color: #e0e0e0;
+}
+
+.task-section.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    border: 1px solid #333;
+}
+
+input.dark-mode,
+select.dark-mode,
+#task-form button.dark-mode {
+    background-color: #333;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+input.dark-mode::placeholder,
+select.dark-mode option {
+    color: #888;
+}
+
+#task-form button.dark-mode {
+    background-color: #444;
+}
+
+#task-form button.dark-mode:hover {
+    background-color: #555;
+}
+
+.task.dark-mode {
+    border-bottom: 1px solid #333;
+}
+
+.task h3.dark-mode,
+.task p.dark-mode {
+    color: #e0e0e0;
+}
+
+.task-completed h3.dark-mode,
+.task-completed p.dark-mode {
+    color: #b0b0b0;
+}
+
+input[type="checkbox"].dark-mode {
+    background-color: #333;
+    border-color: #555;
+}
+
+input[type="checkbox"].dark-mode:checked {
+    background-color: #2E3A59;
+    border-color: #2E3A59;
+}
+
+input[type="checkbox"].dark-mode:checked:before {
+    color: #FFF;
+}
+
+.dark-mode-toggle {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.dark-mode-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.dark-mode-toggle .slider {
+    position: relative;
+    cursor: pointer;
+    background-color: #ccc;
+    border-radius: 34px;
+    width: 60px;
+    height: 34px;
+    transition: .4s;
+}
+
+.dark-mode-toggle .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    border-radius: 50%;
+    background-color: white;
+    transition: .4s;
+    left: 4px;
+    top: 4px;
+}
+
+.dark-mode-toggle input:checked + .slider {
+    background-color: #2196F3;
+}
+
+.dark-mode-toggle input:checked + .slider:before {
+    transform: translateX(26px);
+}
